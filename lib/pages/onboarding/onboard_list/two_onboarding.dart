@@ -4,9 +4,81 @@ import 'package:flutter/material.dart';
 class OnBoardingTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
+
     return Container(
-      child: Center(
-        child: Text("OnBoarding 2"),
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.only(
+              bottom: 20.0,
+            ),
+            height: height * 0.88,
+            width: width,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 20,
+                  offset: Offset(0, 15),
+                  color: Colors.grey.withOpacity(.6),
+                  spreadRadius: -15,
+                ),
+              ],
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30.0),
+                bottomRight: Radius.circular(30.0),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Image
+                  Container(width: 200, height: 200, child: Placeholder()),
+
+                  SizedBox(
+                    height: 20.0,
+                  ),
+
+                  // Text Description
+                  Text(
+                    "With one click you can add every ingredient for a recipe to your cart",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 24.0,
+                      color: Colors.grey,
+                    ),
+                  ),
+
+                  // Dotted navigation
+                ],
+              ),
+            ),
+          ),
+
+          // Skip Button
+          // ToDo: Convert this into common function
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: FlatButton(
+              padding: EdgeInsets.all(20.0),
+              onPressed: () {
+                Navigator.pushNamed(context, '/create_account');
+              },
+              child: Text(
+                "SKIP",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16.0,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

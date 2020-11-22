@@ -31,20 +31,32 @@ class OnBoardingOne extends StatelessWidget {
                 bottomRight: Radius.circular(30.0),
               ),
             ),
-            child: Column(
-              children: [
-                // Image
-                Container(
-                  width: 200,
-                  height: 200,
-                  child: Placeholder(),
-                ),
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Image
+                  Container(width: 200, height: 200, child: Placeholder()),
 
-                // Text Description
-                Text("Quickly search and add add healthy foods to your cart"),
+                  SizedBox(
+                    height: 20.0,
+                  ),
 
-                // Dotted navigation
-              ],
+                  // Text Description
+                  Text(
+                    "Quickly search and add add healthy foods to your cart",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 24.0,
+                      color: Colors.grey,
+                    ),
+                  ),
+
+                  // Dotted navigation
+                ],
+              ),
             ),
           ),
 
