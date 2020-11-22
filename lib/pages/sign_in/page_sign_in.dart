@@ -44,7 +44,7 @@ class SignIn extends StatelessWidget {
                 ),
 
                 SizedBox(
-                  height: 100.0,
+                  height: 60.0,
                 ),
 
                 // Email
@@ -114,7 +114,9 @@ class SignIn extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: FlatButton(
               padding: EdgeInsets.all(20.0),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/create_account');
+              },
               child: Text(
                 "CREATE ACCOUNT",
                 style: TextStyle(

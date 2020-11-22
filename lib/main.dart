@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/pages/create_account/page_create_account.dart';
 import 'package:flutter_fresh_food/pages/sign_in/page_sign_in.dart';
 
 void main() {
@@ -16,7 +17,10 @@ class FreshFood extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: '/',
-      routes: {'/': (context) => SignIn()},
+      routes: {
+        '/': (context) => SignIn(),
+        '/create_account': (context) => CreateAccount(),
+      },
     );
   }
 }
