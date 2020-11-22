@@ -16,15 +16,16 @@ class SignIn extends StatelessWidget {
             padding: EdgeInsets.only(
               bottom: 20.0,
             ),
-            height: height * 0.85,
+            height: height * 0.88,
             width: width,
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey,
-                  spreadRadius: 1.0,
-                  blurRadius: 20.0,
+                  blurRadius: 20,
+                  offset: Offset(0, 15),
+                  color: Colors.grey.withOpacity(.6),
+                  spreadRadius: -15,
                 ),
               ],
               borderRadius: BorderRadius.only(
@@ -87,29 +88,39 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                RaisedButton.icon(
+                Container(
                   padding: EdgeInsets.symmetric(
-                    vertical: 15.0,
-                    horizontal: 100.0,
+                    horizontal: 30.0,
                   ),
-                  onPressed: () {},
-                  shape: StadiumBorder(),
-                  color: Colors.green,
-                  label: Text(
-                    "Sign In",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
+                  width: double.infinity,
+                  child: RaisedButton.icon(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 15.0,
                     ),
-                  ),
-                  icon: Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/onboarding');
+                    },
+                    shape: StadiumBorder(),
+                    color: Colors.green,
+                    label: Text(
+                      "Sign In",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
+                    ),
                   ),
                 )
               ],
             ),
           ),
+
+          // Create account button
+          // ToDo: Convert this into common function
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: FlatButton(
@@ -121,7 +132,7 @@ class SignIn extends StatelessWidget {
                 "CREATE ACCOUNT",
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 18.0,
+                  fontSize: 16.0,
                 ),
               ),
             ),
