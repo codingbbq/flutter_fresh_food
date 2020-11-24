@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fresh_food/pages/create_account/page_create_account.dart';
+import 'package:flutter_fresh_food/pages/home/page_home.dart';
 import 'package:flutter_fresh_food/pages/onboarding/page_onboarding.dart';
 import 'package:flutter_fresh_food/pages/sign_in/page_sign_in.dart';
 
@@ -23,6 +24,7 @@ class FreshFood extends StatelessWidget {
         '/sign_in': (context) => SignIn(),
         '/create_account': (context) => CreateAccount(),
         '/onboarding': (context) => OnBoarding(),
+        '/home': (context) => HomePage(),
       },
     );
   }

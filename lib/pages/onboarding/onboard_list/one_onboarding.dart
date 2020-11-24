@@ -1,5 +1,6 @@
 // First page of Onboarding
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/utils/custom_box_decoration.dart';
 
 class OnBoardingOne extends StatelessWidget {
   @override
@@ -16,21 +17,7 @@ class OnBoardingOne extends StatelessWidget {
             ),
             height: height * 0.88,
             width: width,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 20,
-                  offset: Offset(0, 15),
-                  color: Colors.grey.withOpacity(.6),
-                  spreadRadius: -15,
-                ),
-              ],
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30.0),
-                bottomRight: Radius.circular(30.0),
-              ),
-            ),
+            decoration: customBoxDecoration,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -67,7 +54,7 @@ class OnBoardingOne extends StatelessWidget {
             child: FlatButton(
               padding: EdgeInsets.all(20.0),
               onPressed: () {
-                Navigator.pushNamed(context, '/create_account');
+                Navigator.pushNamed(context, '/home');
               },
               child: Text(
                 "SKIP",

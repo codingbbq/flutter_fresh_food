@@ -1,14 +1,14 @@
 // Settings page of Onboarding
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/model/model_onboarding_settings.dart';
+import 'package:flutter_fresh_food/utils/custom_box_decoration.dart';
 
 class OnBoardingSettings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
-    bool _all = false;
-    bool _vegan = false;
-    bool _vegeterian = false;
+
     return Container(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -19,27 +19,15 @@ class OnBoardingSettings extends StatelessWidget {
             ),
             height: height * 0.86,
             width: width,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 20,
-                  offset: Offset(0, 15),
-                  color: Colors.grey.withOpacity(.6),
-                  spreadRadius: -15,
-                ),
-              ],
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30.0),
-                bottomRight: Radius.circular(30.0),
-              ),
-            ),
+            decoration: customBoxDecoration,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  SizedBox(
+                    height: 20.0,
+                  ),
                   // Settings Header
                   Text(
                     "Recipe Preferences",
@@ -50,18 +38,20 @@ class OnBoardingSettings extends StatelessWidget {
                     ),
                   ),
 
+                  Expanded(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: onboardingSettingsList.length,
+                      itemBuilder: (context, index) => SwitchListTile(
+                        title: Text(onboardingSettingsList[index].property),
+                        value: onboardingSettingsList[index].value,
+                        onChanged: (value) {},
+                      ),
+                    ),
+                  ),
                   SizedBox(
                     height: 20.0,
                   ),
-
-                  SwitchListTile(
-                    title: Text("All"),
-                    value: _all,
-                    onChanged: (value) {
-                      print(value);
-                    },
-                  ),
-
                   // Text Description
                   Text(
                     "Tailor your Recipes feed exactly how you like it",
@@ -90,7 +80,7 @@ class OnBoardingSettings extends StatelessWidget {
                 vertical: 15.0,
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/onboarding');
+                Navigator.pushNamed(context, '/home');
               },
               shape: StadiumBorder(),
               color: Colors.green,

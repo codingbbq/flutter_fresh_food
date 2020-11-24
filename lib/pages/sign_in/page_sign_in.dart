@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/utils/custom_box_decoration.dart';
 import 'package:flutter_fresh_food/utils/input_text_field.dart';
 
 class SignIn extends StatelessWidget {
@@ -18,21 +19,7 @@ class SignIn extends StatelessWidget {
             ),
             height: height * 0.88,
             width: width,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 20,
-                  offset: Offset(0, 15),
-                  color: Colors.grey.withOpacity(.6),
-                  spreadRadius: -15,
-                ),
-              ],
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30.0),
-                bottomRight: Radius.circular(30.0),
-              ),
-            ),
+            decoration: customBoxDecoration,
             child: Column(
               children: [
                 SizedBox(height: 100.0),
