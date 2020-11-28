@@ -12,8 +12,12 @@ class HomePage extends StatelessWidget {
 
     // Get the first item from the food category
     FreshFoodCategory firstCategory = freshFoodCatList[0];
+    // To display the food card as scrollable row items;
+    List<FreshFoodCategory> foodCategory =
+        freshFoodCatList.cast<FreshFoodCategory>();
 
     return Scaffold(
+      extendBody: false,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
@@ -82,13 +86,19 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [FreshFoodCard()],
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              shrinkWrap: true,
+              children: [
+                for (var i = 1; i < foodCategory.length; i++)
+                  FreshFoodCard(
+                    foodItem: foodCategory[i],
+                  )
+              ],
             ),
-          )
+          ),
+          SizedBox(height: 70),
         ],
       ),
     );

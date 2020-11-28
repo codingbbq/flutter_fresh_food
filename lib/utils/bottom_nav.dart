@@ -6,7 +6,7 @@ class CustomBottomNavigation extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: Colors.orange,
+        color: Colors.transparent,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
