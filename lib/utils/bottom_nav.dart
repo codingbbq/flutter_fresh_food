@@ -12,24 +12,46 @@ class CustomBottomNavigation extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           IconButton(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              size: 30.0,
+              color: Colors.grey,
+            ),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              size: 30.0,
+              color: Colors.grey,
+            ),
             onPressed: () {},
           ),
           FloatingActionButton(
+            backgroundColor: Colors.grey,
             onPressed: () {},
-            child: Icon(Icons.add),
+            child: Icon(
+              Icons.add,
+              size: 30.0,
+            ),
           ),
           IconButton(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.shopping_cart,
+              size: 30.0,
+              color: Colors.grey,
+            ),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(Icons.home),
-            onPressed: () {},
+            icon: Icon(
+              Icons.settings,
+              size: 30.0,
+              color: Colors.grey,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/settings');
+            },
           ),
         ],
       ),

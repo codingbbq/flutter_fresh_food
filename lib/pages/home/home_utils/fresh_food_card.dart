@@ -30,10 +30,13 @@ class FreshFoodCard extends StatelessWidget {
           SizedBox(
             height: 10.0,
           ),
+          Spacer(),
           Text(
             foodItem.categoryName,
             style: TextStyle(
               fontSize: 18.0,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],
