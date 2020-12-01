@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fresh_food/pages/create_account/page_create_account.dart';
 import 'package:flutter_fresh_food/pages/home/page_home.dart';
 import 'package:flutter_fresh_food/pages/onboarding/page_onboarding.dart';
+import 'package:flutter_fresh_food/pages/settings/accounts/page_accounts.dart';
+import 'package:flutter_fresh_food/pages/settings/livechat/page_livechat.dart';
+import 'package:flutter_fresh_food/pages/settings/orders/page_orders.dart';
 import 'package:flutter_fresh_food/pages/settings/page_settings.dart';
 import 'package:flutter_fresh_food/pages/sign_in/page_sign_in.dart';
 
@@ -27,6 +30,14 @@ class FreshFood extends StatelessWidget {
         '/onboarding': (context) => OnBoarding(),
         '/home': (context) => HomePage(),
         '/settings': (contenxt) => SettingsPage(),
+
+        // Settings Nav
+        '/account': (contenxt) => Accounts(),
+        '/orders': (contenxt) => Orders(),
+        '/livechat': (contenxt) => LiveChat(),
+        '/darkmode': (contenxt) =>
+            SignIn(), // ToDo : Implement dark mode option
+        '/signout': (contenxt) => SignIn(),
       },
     );
   }

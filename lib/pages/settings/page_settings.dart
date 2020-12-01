@@ -40,17 +40,6 @@ class SettingsPage extends StatelessWidget {
               ),
               child: Column(
                 children: getSettingItems(),
-                // children: [
-                //   SettingsNav(),
-                //   SettingsNav(),
-                //   SettingsNav(),
-                //   SettingsNav(),
-                //   Spacer(),
-                //   SettingsNav(),
-                //   SizedBox(
-                //     height: 80.0,
-                //   ),
-                // ],
               ),
             ),
           )
@@ -63,10 +52,11 @@ class SettingsPage extends StatelessWidget {
 getSettingItems() {
   List<Widget> newSettingsList = [];
   for (var i = 0; i < settingsList.length; i++) {
+    // Before that last item, add a spacer
     if (i == settingsList.length - 1) {
       newSettingsList.add(Spacer());
     }
-    newSettingsList.add(SettingsNav());
+    newSettingsList.add(SettingsNav(navObj: settingsList[i]));
   }
 
   // To add some spacing so that the list item does not hide behind bottomshit

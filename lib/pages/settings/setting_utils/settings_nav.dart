@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/model/model_settings_nav.dart';
 
 class SettingsNav extends StatelessWidget {
+  final SettingsNavItem navObj;
+
+  const SettingsNav({Key key, this.navObj}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,28 +23,27 @@ class SettingsNav extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(
-            Icons.person,
-            size: 30.0,
-          ),
+          navObj.leading,
           SizedBox(
             width: 10.0,
           ),
           Text(
-            "Your Account",
+            navObj.nav,
             style: TextStyle(
               fontSize: 20.0,
               color: Colors.grey,
             ),
           ),
           Spacer(),
-          IconButton(
-            icon: Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.grey,
-            ),
-            onPressed: () {},
-          )
+          navObj.trailing != null
+              ? IconButton(
+                  icon: navObj.trailing,
+                  iconSize: 16.0,
+                  onPressed: () {
+                    Navigator.pushNamed(context, navObj.link);
+                  },
+                )
+              : Text(""),
         ],
       ),
     );
