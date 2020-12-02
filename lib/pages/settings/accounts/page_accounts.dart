@@ -44,19 +44,20 @@ class Accounts extends StatelessWidget {
 
           // Body
           Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 20.0,
-                horizontal: 20.0,
-              ),
-              child: Column(
-                children: [
-                  AccountsYourInfo(),
-                  SizedBox(
-                    height: 20.0,
-                  ),
-                  AccountsPreferences(),
-                ],
-              ))
+            padding: const EdgeInsets.symmetric(
+              vertical: 20.0,
+              horizontal: 20.0,
+            ),
+            child: Column(
+              children: [
+                AccountsYourInfo(),
+                SizedBox(
+                  height: 20.0,
+                ),
+                AccountsPreferences(),
+              ],
+            ),
+          )
         ],
       ),
     );
