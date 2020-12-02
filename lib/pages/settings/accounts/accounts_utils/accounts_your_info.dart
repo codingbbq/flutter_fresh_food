@@ -17,11 +17,12 @@ class AccountsYourInfo extends StatelessWidget {
         Container(
           padding: EdgeInsets.all(20.0),
           decoration: BoxDecoration(
-            color: Colors.grey[300],
+            color: Colors.grey[200],
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: Column(
             children: [
+              // Name
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -54,38 +55,119 @@ class AccountsYourInfo extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10.0),
+
+              // Address
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Address",
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          color: Colors.grey[700],
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Address",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.grey[700],
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Text(
-                        "42 Wallable way, London, United Kingdom",
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Colors.grey[500],
+                        SizedBox(
+                          height: 5.0,
                         ),
-                      ),
-                    ],
+                        Text(
+                          "42 Wallable way, London, United Kingdom",
+                          softWrap: false,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.grey[500],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   IconButton(
                     icon: Icon(Icons.edit),
                     onPressed: () {},
                   ),
                 ],
-              )
+              ),
+
+              SizedBox(height: 10.0),
+              // Email
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Email",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Text(
+                          "orlando.smith@email.com",
+                          softWrap: false,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.grey[500],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.edit),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+
+              SizedBox(height: 10.0),
+              // Password
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Password",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Text(
+                          "******",
+                          softWrap: false,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.grey[500],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.edit),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
             ],
           ),
         )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/pages/settings/accounts/accounts_utils/accounts_preferences.dart';
 import 'package:flutter_fresh_food/pages/settings/accounts/accounts_utils/accounts_your_info.dart';
 import 'package:flutter_fresh_food/utils/custom_box_decoration.dart';
 
@@ -50,6 +51,10 @@ class Accounts extends StatelessWidget {
               child: Column(
                 children: [
                   AccountsYourInfo(),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  AccountsPreferences(),
                 ],
               ))
         ],
