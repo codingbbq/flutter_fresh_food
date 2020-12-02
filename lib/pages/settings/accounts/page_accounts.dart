@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fresh_food/pages/settings/accounts/accounts_utils/accounts_your_info.dart';
 import 'package:flutter_fresh_food/utils/custom_box_decoration.dart';
 
 class Accounts extends StatelessWidget {
@@ -42,63 +43,15 @@ class Accounts extends StatelessWidget {
 
           // Body
           Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: 20.0,
-              horizontal: 20.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Your information",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 24.0,
-                  ),
-                ),
-                SizedBox(height: 15.0),
-                Container(
-                  padding: EdgeInsets.all(20.0),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Full Name",
-                                style: TextStyle(
-                                  fontSize: 18.0,
-                                  color: Colors.grey[700],
-                                ),
-                              ),
-                              Text(
-                                "Orlando smith",
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Colors.grey[500],
-                                ),
-                              ),
-                            ],
-                          ),
-                          IconButton(
-                            icon: Icon(Icons.edit),
-                            onPressed: () {},
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
-          )
+              padding: const EdgeInsets.symmetric(
+                vertical: 20.0,
+                horizontal: 20.0,
+              ),
+              child: Column(
+                children: [
+                  AccountsYourInfo(),
+                ],
+              ))
         ],
       ),
     );
