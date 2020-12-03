@@ -57,11 +57,15 @@ class Orders extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     child: ExpansionTile(
+                      initiallyExpanded: true,
                       tilePadding: EdgeInsets.symmetric(
                         horizontal: 20.0,
                         vertical: 10.0,
                       ),
-                      childrenPadding: EdgeInsets.all(20.0),
+                      childrenPadding: EdgeInsets.symmetric(
+                        horizontal: 20.0,
+                        vertical: 10.0,
+                      ),
                       expandedCrossAxisAlignment: CrossAxisAlignment.start,
                       backgroundColor: Colors.grey[200],
                       title: Text(
@@ -71,7 +75,122 @@ class Orders extends StatelessWidget {
                           color: Colors.grey,
                         ),
                       ),
-                      children: [Text("AAA")],
+                      children: [
+                        DataTable(
+                          dividerThickness: 0.0,
+                          headingRowHeight: 0,
+                          dataRowHeight: 80,
+                          columns: [
+                            DataColumn(
+                              label: Text(''),
+                            ),
+                            DataColumn(
+                              label: Text(''),
+                            ),
+                            DataColumn(
+                              label: Text(''),
+                            ),
+                          ],
+                          rows: [
+                            DataRow(
+                              cells: [
+                                DataCell(
+                                  Text(
+                                    "Broccolli",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Text(
+                                    "2 Heads",
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[500],
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Text(
+                                    "60.0",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            DataRow(
+                              cells: [
+                                DataCell(
+                                  Text(
+                                    "Red Peppers",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Text(
+                                    "4 Nos.",
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[500],
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Text(
+                                    "1.5",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            DataRow(
+                              cells: [
+                                DataCell(
+                                  Text(
+                                    "Kale",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Text(
+                                    "300g",
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[500],
+                                    ),
+                                  ),
+                                ),
+                                DataCell(
+                                  Text(
+                                    "3.0",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.grey[700],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   )
                 ],
