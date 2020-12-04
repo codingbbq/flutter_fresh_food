@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fresh_food/pages/create_account/page_create_account.dart';
 import 'package:flutter_fresh_food/pages/home/page_home.dart';
 import 'package:flutter_fresh_food/pages/onboarding/page_onboarding.dart';
+import 'package:flutter_fresh_food/pages/quick_shop/page_quick_shop.dart';
 import 'package:flutter_fresh_food/pages/settings/accounts/page_accounts.dart';
 import 'package:flutter_fresh_food/pages/settings/livechat/page_livechat.dart';
 import 'package:flutter_fresh_food/pages/settings/orders/page_orders.dart';
@@ -30,7 +31,7 @@ class FreshFood extends StatelessWidget {
         '/onboarding': (context) => OnBoarding(),
         '/home': (context) => HomePage(),
         '/settings': (contenxt) => SettingsPage(),
-
+        '/quick_shop': (context) => QuickShop(),
         // Settings Nav
         '/account': (contenxt) => Accounts(),
         '/orders': (contenxt) => Orders(),

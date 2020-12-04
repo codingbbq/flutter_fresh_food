@@ -29,7 +29,9 @@ class CustomBottomNavigation extends StatelessWidget {
           ),
           FloatingActionButton(
             backgroundColor: Colors.grey,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/quick_shop');
+            },
             child: Icon(
               Icons.add,
               size: 30.0,

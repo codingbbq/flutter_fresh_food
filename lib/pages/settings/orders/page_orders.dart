@@ -79,7 +79,7 @@ class Orders extends StatelessWidget {
                         DataTable(
                           dividerThickness: 0.0,
                           headingRowHeight: 0,
-                          dataRowHeight: 80,
+                          dataRowHeight: 70,
                           columns: [
                             DataColumn(
                               label: Text(''),
