@@ -10,7 +10,7 @@ class QuickShop extends StatelessWidget {
       _mainAxisSpacing = 15,
       _aspectRatio = 0.7;
   final int _crossAxisCount = 3;
-
+  final PageController _pageViewController = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,22 +68,38 @@ class QuickShop extends StatelessWidget {
             height: 15.0,
           ),
           //Body
+
           Container(
-            height: MediaQuery.of(context).size.height - 230,
-            width: MediaQuery.of(context).size.width,
-            decoration: customBoxDecoration,
-            child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: _crossAxisCount,
-                crossAxisSpacing: _crossAxisSpacing,
-                mainAxisSpacing: _mainAxisSpacing,
-                childAspectRatio: _aspectRatio,
-              ),
-              itemCount: shopItems.length,
-              itemBuilder: (context, index) =>
-                  ShopItemWidget(item: shopItems[index]),
-            ),
-          ),
+              height: MediaQuery.of(context).size.height - 230,
+              width: MediaQuery.of(context).size.width,
+              decoration: customBoxDecoration,
+              child: PageView(
+                controller: _pageViewController,
+                children: [
+                  GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: _crossAxisCount,
+                      crossAxisSpacing: _crossAxisSpacing,
+                      mainAxisSpacing: _mainAxisSpacing,
+                      childAspectRatio: _aspectRatio,
+                    ),
+                    itemCount: shopItems.length,
+                    itemBuilder: (context, index) =>
+                        ShopItemWidget(item: shopItems[index]),
+                  ),
+                  GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: _crossAxisCount,
+                      crossAxisSpacing: _crossAxisSpacing,
+                      mainAxisSpacing: _mainAxisSpacing,
+                      childAspectRatio: _aspectRatio,
+                    ),
+                    itemCount: shopItems.length,
+                    itemBuilder: (context, index) =>
+                        ShopItemWidget(item: shopItems[index]),
+                  ),
+                ],
+              )),
         ],
       ),
     );
