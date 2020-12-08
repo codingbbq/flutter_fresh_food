@@ -28,7 +28,8 @@ class OnBoardingOne extends StatelessWidget {
                   Container(
                     width: 200,
                     height: 200,
-                    child: Placeholder(),
+                    child: Image.asset(
+                        "assets/images/onboarding/one_onboarding.png"),
                   ),
 
                   SizedBox(

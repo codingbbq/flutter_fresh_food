@@ -17,15 +17,19 @@ class CustomBottomNavigation extends StatelessWidget {
               size: 30.0,
               color: Colors.grey,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
           ),
           IconButton(
             icon: Icon(
-              Icons.home,
+              Icons.receipt,
               size: 30.0,
               color: Colors.grey,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/recipes');
+            },
           ),
           FloatingActionButton(
             backgroundColor: Colors.grey,
@@ -43,7 +47,9 @@ class CustomBottomNavigation extends StatelessWidget {
               size: 30.0,
               color: Colors.grey,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/cart');
+            },
           ),
           IconButton(
             icon: Icon(

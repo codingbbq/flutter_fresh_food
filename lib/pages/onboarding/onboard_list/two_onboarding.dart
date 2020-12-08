@@ -25,7 +25,13 @@ class OnBoardingTwo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Image
-                  Container(width: 200, height: 200, child: Placeholder()),
+                  Container(
+                    width: 200,
+                    height: 200,
+                    child: Image.asset(
+                      "assets/images/onboarding/two_onboarding.png",
+                    ),
+                  ),
 
                   SizedBox(
                     height: 20.0,
